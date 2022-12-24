@@ -112,34 +112,34 @@ void loop() {
 
 //------------------------Changing Base Color acording to temperature--------------------
       if(temp < 273){
-        BaseChange(strip.Color(160, 8, 255), 50);
+        BaseChange(strip.Color(255, 255, 255), 50); //White
       }
       else if(temp >= 273 && temp < 277){
-        BaseChange(strip.Color(98, 7, 255), 50);
+        BaseChange(strip.Color(160, 8, 255), 50); //violet
       }
       else if(temp >= 277 && temp < 283){
-        BaseChange(strip.Color(0, 60, 255), 50);
+        BaseChange(strip.Color(0, 0, 255), 50); //blue
       }
       else if(temp >= 283 && temp < 288){
-        BaseChange(strip.Color(0, 238, 255), 50);
+        BaseChange(strip.Color(0, 238, 255), 50); //light blue
       }
       else if(temp >= 288 && temp < 294){
-        BaseChange(strip.Color(0, 255, 42), 50);
+        BaseChange(strip.Color(0, 255, 0), 50); //green
       }
       else if(temp >= 294 && temp < 299){
-        BaseChange(strip.Color(255, 255, 0), 50);
+        BaseChange(strip.Color(255, 255, 0), 50); // yellow
       }
       else if(temp >= 299 && temp < 305){
-        BaseChange(strip.Color(255, 170, 0), 50);
+        BaseChange(strip.Color(255, 170, 0), 50); //orange
       }
       else if(temp >= 305 && temp < 310){
-        BaseChange(strip.Color(255, 89, 0), 50);
+        BaseChange(strip.Color(255, 41, 148), 50); //pink
       }
       else if(temp > 310){
-        BaseChange(strip.Color(255, 0, 0), 50);
+        BaseChange(strip.Color(255, 0, 0), 50); //red
       }      
       else{
-        BaseChange(strip.Color(255, 0, 255), 50);
+        BaseChange(strip.Color(255, 0, 255), 50);  // purple trouble code
       }
     }
     weatherMessage = " ";
@@ -198,64 +198,64 @@ void loop() {
       
       if(clouds < 20 && rainy < 20 && snowy < 20 && tstorm < 20 && naders < 20)
       {
-       CloudChange(strip.Color(0, 235, 255), 50);
+       CloudChange(strip.Color(0, 235, 255), 50); //light blue -clear
       }
       else if(clouds < 85 && rainy < 20 && snowy < 20 && tstorm < 20 && naders < 20)
       {
-       CloudChange(strip.Color(240, 240, 240), 50);
+       CloudChange(strip.Color(240, 240, 240), 50); //white mild cloud cover
       }
       else if(clouds >= 85 && rainy < 20 && snowy < 20 && tstorm < 20 && naders < 20)
       {
-       CloudChange(strip.Color(150, 150, 150), 50);
+       CloudChange(strip.Color(150, 150, 150), 50); // gray cloudy
       }
       else if(rainy >= 50 && snowy < 20 && tstorm < 20 && naders < 20)
       {
-       CloudChange(strip.Color(0, 255, 0), 50);
+       CloudChange(strip.Color(0, 255, 0), 50); // green rain
       }
       else if(snowy >= 50 && rainy < 20 && tstorm < 20 && naders < 20)
       {
-       CloudChange(strip.Color(160, 8, 255), 50);
+       CloudChange(strip.Color(160, 8, 255), 50); //purple snow
       }
       else if(tstorm >= 20)
       {
-       thunder(strip.Color(255, 255, 0), 50);
+       thunder(strip.Color(255, 255, 0), 50); //flashing yellow thunderstorm
       }
       else if(naders >= 20)
       {
-       thunder(strip.Color(255, 0, 0), 50);
+       thunder(strip.Color(255, 0, 0), 50); // flashing red tornado
       }
       else
       {
-       CloudChange(strip.Color(50, 50, 50), 50);
+       CloudChange(strip.Color(50, 50, 50), 50); // black or off error code
       }
 
 //-----------------------Changing Sun / Moon Color according to time---------------------------------
       if(hour >= 6 && hour < 11){
-        SunMoonChange(strip.Color(255, 255, 255), 50);
+        SunMoonChange(strip.Color(255, 255, 255), 50); // white moon after midnight
       }
       else if(hour >= 11 && hour < 14){
-        SunMoonChange(strip.Color(245, 30, 0), 129);
+        SunMoonChange(strip.Color(245, 30, 129), 50); // orange 6-8am 
       }
       else if(hour >= 14 && hour < 18){
-        SunMoonChange(strip.Color(255, 170, 0), 50);
+        SunMoonChange(strip.Color(255, 170, 0), 50); // light orange 8-12
       }
       else if(hour >= 18 && hour < 23){
-        SunMoonChange(strip.Color(255, 255, 0), 50);
+        SunMoonChange(strip.Color(255, 255, 0), 50); // yellow noon-5
       }
       else if(hour >= 23){
-        SunMoonChange(strip.Color(255, 0, 0), 50);
+        SunMoonChange(strip.Color(255, 0, 0), 50); // red -5-6
       }
       else if(hour = 12 && times.endsWith(amHours)){
-        SunMoonChange(strip.Color(222, 0, 170), 50);
+        SunMoonChange(strip.Color(222, 0, 170), 50); //red violet 6-8
       }
       else if(hour >= 0 && hour < 2){
-        SunMoonChange(strip.Color(222, 0, 170), 50);
+        SunMoonChange(strip.Color(222, 0, 170), 50); //red violet continued
       }
       else if(hour >= 2 && hour <= 6){
-        SunMoonChange(strip.Color(145, 18, 219), 50);
+        SunMoonChange(strip.Color(145, 18, 219), 50); //purple blue 8- midnight
       }
       else{
-        SunMoonChange(strip.Color(70, 10, 200), 50);
+        SunMoonChange(strip.Color(70, 10, 200), 50); //blue error
       }
     }
     timeMessage = " ";
