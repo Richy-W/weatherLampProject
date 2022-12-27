@@ -280,7 +280,7 @@ void httpRequest1() {
     Serial.println("Connecting...");
     
     // send the HTTP PUT request
-    client1.println(F("GET /data/2.5/weather?lat=34.757080&lon=-96.668090&appid=42d37f2a43cf2550d64789c35161f07a HTTP/1.1"));
+    client1.println(F("GET /data/2.5/weather?lat=34.757080&lon=-96.668090&appid=_API_KEY_HERE HTTP/1.1"));
     client1.println(F("Host: api.openweathermap.org"));
     client1.println("Connection: close");
     client1.println();
