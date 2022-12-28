@@ -1,5 +1,4 @@
 # weatherLampProject
-Christmas gift Project 
 
 Quick glance lamp that changes color based on time, weather condition, and temperature.
 
